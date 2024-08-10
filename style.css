@@ -1,4 +1,5 @@
  @import url('https://fonts.cdnfonts.com/css/telegraf');
+@import url('https://fonts.cdnfonts.com/css/poppins');
 :root{
   --main-bg-color: #222222;
   --main-div-color:#131313;
@@ -79,4 +80,50 @@ nav ul {
 
 nav ul li a {
   opacity: .8;
+}
+
+.hero_text {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /*: Creates a 12-column grid where each column is of equal width, allowing for flexible placement and alignment of child elements.*/
+  margin-bottom: 2rem;
+}
+
+.sub_header {
+  grid-column: span 12;
+  display: flex;
+ align-items: center;
+ margin-bottom: 1rem;
+}
+
+.circle {
+  width: .5rem;
+  height: .5rem;
+  background-color: #d6a3e4;
+  margin-right: .5rem;
+  border-radius: 50%;
+  margin-bottom: .125rem;
+}
+
+.sub_header h4 {
+  font-weight: bold;
+}
+
+.hero_header {
+  grid-column: span 12;
+  margin-bottom: 1rem;
+}
+
+.hero_intro {
+  grid-column: span 5;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  opacity: .8;
+}
+
+.bottom_div {
+  position: relative;
+  width: var(--width);
+  padding-top: 30px;
+  max-width: var(--max-width);
+  background-color: red;
 }
