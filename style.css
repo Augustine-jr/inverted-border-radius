@@ -57,7 +57,7 @@ main {
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
   border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
+  /*border-bottom-right-radius: var(--border-radius);*/
 }
 
 .nav_container {
@@ -161,5 +161,73 @@ nav ul li a {
   min-height: 20px;
   background-color: var(--main-div-color);
   border-bottom-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+.services {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  background-color: var(--main-bg-color);
+  border-radius: calc(var(--border-radius) - 1rem);
+}
+
+/* Carousel */
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.carousel_inner {
+  position: relative;
+  display: flex;
+  width: 200%;
+  animation: marquee 10s linear infinite;
+}
+
+.item {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item img  {
+  width: 60%;
+}
+
+.left_carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(270deg, transparent, var(--main-div-color));
+  z-index: 1;
+}
+
+.right_carousel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--main-div-color));
+  z-index: 1;
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
