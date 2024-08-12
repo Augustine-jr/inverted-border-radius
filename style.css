@@ -231,3 +231,24 @@ nav ul li a {
     transform: translateX(-50%);
   }
 }
+
+#about {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about_container {
+  position: relative;
+  top: -5rem;
+  width: var(--width);
+  max-width: var(--max-width);
+  display: grid;
+ grid-template-columns: repeat(12, 1fr);
+}
+
+.about_text {
+  grid-column: span 5;
+  padding-left: 2rem;
+}
